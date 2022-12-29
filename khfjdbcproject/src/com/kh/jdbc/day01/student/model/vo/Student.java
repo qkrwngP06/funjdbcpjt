@@ -123,6 +123,7 @@ public class Student {
 	public String toString() {
 		return "Student [studentId=" + studentId + ", studentPwd=" + studentPwd + ", studentName=" + studentName
 				+ ", gender=" + gender + ", age=" + age + ", email=" + email + ", phone=" + phone + ", address="
-				+ address + ", hobby=" + hobby + ", enrollDate=" + enrollDate + "]";
+				+ address + ", hobby=" + hobby + ", enrollDate=" + enrollDate + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 }

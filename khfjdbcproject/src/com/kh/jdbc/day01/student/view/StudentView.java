@@ -21,7 +21,36 @@ public class StudentView {
 			System.out.println(", 가입날짜 : " + sOne.getEnrollDate());
 		}
 	}
-
+	//회원 아이디로 검색
+	public void showOne(Student student) {
+		System.out.print("아이디 : " + student.getStudentId());
+		System.out.print(", 비밀번호 : " + student.getStudentPwd());
+		System.out.print(", 이름 : " + student.getStudentName());
+		System.out.print(", 성별 : " + student.getGender());
+		System.out.print(", 나이 : " + student.getAge());
+		System.out.print (", 이메일 : " + student.getEmail());
+		System.out.print(", 전화번호 : " + student.getPhone());
+		System.out.print(", 주소 : " + student.getAddress());
+		System.out.print(", 취미 : " + student.getHobby());
+		System.out.println(", 가입날짜 : " + student.getEnrollDate());
+	}
+	//아이디로 조회
+	public String inputStudentId(String message) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print(message + "아이디 입력 : ");
+		String studentId = sc.next();
+		return studentId;
+	}
+	
+	//이름으로 조회
+	public String inputStudentName(String message) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print(message + "할 이름 입력 :");
+		String studentName = sc.next();
+		return studentName;
+	}
+	
+	//회원가입
 	public Student inputStudent() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("아이디: ");
@@ -60,7 +89,30 @@ public class StudentView {
 				null);
 		return student;
 	}
-
+	
+	//학생 수정
+	public Student modifyStudent(Student student) {
+		Scanner sc = new Scanner(System.in);
+		//Student student = new Student();
+		System.out.print("수정할 비밀번호 입력: ");
+		String studentPwd = sc.next();
+		System.out.print("수정할 이메일 입력: ");
+		String email = sc.next();
+		System.out.print("수정할 전화번호 입력: ");
+		String phone = sc.next();
+		System.out.print("수정할 주소 입력: ");
+		sc.nextLine();
+		String address = sc.nextLine();
+		System.out.print("수정할 취미 입력: ");
+		String hobby = sc.next();
+		student.setStudentPwd(studentPwd);
+		student.setEmail(email);
+		student.setPhone(phone);
+		student.setAddress(address);
+		student.setHobby(hobby);
+		return student;
+	}
+	
 	public int mainMenu() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("메뉴 선택: ");
